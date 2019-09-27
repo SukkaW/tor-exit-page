@@ -26,6 +26,12 @@ Basically, you need to setup a tor exit, open `DirPort` (usually on `80` for def
 
 You can also setup a web server (Apache, Nginx, Caddy, etc.) to do the job if your DirPort is not on TCP port 80.
 
+## Demo
+
+http://tor-relay.ank.moe/
+
+> A tor exit router operated by Ank Tech Ltd. that uses this project.
+
 ## License
 
 `Tor Exit Page` is open sourced under [GPLv3](./LICENSE) license.
