@@ -1,0 +1,24 @@
+{
+  "name": "tor-exit-page",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A Tor Exit Router page",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SukkaW/tor-exit-page.git"
+  },
+  "keywords": [
+    "Tor"
+  ],
+  "author": "SukkaW (isukkaw@gmail.com)",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "fancy-log": "^1.3.3",
+    "gulp": "^4.0.2",
+    "gulp-ejs": "^4.1.2",
+    "gulp-htmlclean": "^2.7.22",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-rename": "^1.4.0",
+    "js-yaml": "^3.13.1"
+  }
+}

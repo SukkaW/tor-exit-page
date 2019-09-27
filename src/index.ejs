@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.5/css/bulma.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="no-transform" http-equiv="Cache-Control">
+    <meta content="no-siteapp" http-equiv="Cache-Control">
+    <style>
+        summary {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero is-medium is-primary is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title"><%= title %></h1>
+                <p class="subtitle"><%= description %></p>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <section class="section">
+            <div class="content">
+                <div>
+                    <p>Most likely you are accessing this website because you had some issue with the traffic coming from this IP. This router is part of the <a href="https://www.torproject.org/" rel="external">Tor Anonymity Network</a>, which is dedicated to providing people with anonymity who need it most: average computer users. This router IP should be generating no other traffic, unless it has been compromised.</p>
+                    <p>While Tor is not designed for malicious computer users, it is inevitable that some may use the network for malicious ends. In the mind of this operator, the social need for easily accessible censorship-resistant anonymous communication trumps the risk. Tor sees use by many important segments of the population, including whistle blowers, journalists, Chinese dissidents skirting the Great Firewall and oppressive censorship, abuse victims, stalker targets, the US military, and law enforcement, just to name a few.</p>
+                    <p>For more information, please consult the following documentation:</p>
+                    <ul>
+                        <li>
+                            <a href="https://www.torproject.org/about/overview" target="_blank">Tor Overview</a>
+                        </li>
+                        <li>
+                            <a href="https://www.torproject.org/docs/faq-abuse" target="_blank">Tor Abuse FAQ</a>
+                        </li>
+                        <li>
+                            <a href="https://www.torproject.org/eff/tor-legal-faq" target="_blank">Tor Legal FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                <br>
+                <details>
+                    <summary class="title is-5">What is Tor & How Tor Works</summary>
+                    <p>The Tor Project makes a browser that allows anyone to surf the Internet anonymously. Tor stands for "the onion router" and that describes how the service works. Traffic is routed through a number of relays run across the Internet where each relay only knows the next hop (because each hop is enclosed in a cryptographic envelope), not the ultimate destination, until the traffic gets to the final exit node which connects to the website — like peeling the layers of an onion.</p>
+                    <p>Think of it like a black box: traffic goes into the box, is bounced around between a random set of relays, and ultimately comes out to connect to the requested site. Anonymity is assured because anyone monitoring the network would have a difficult time tying the individuals making the requests going into the black box with the requests coming out.</p>
+                    <figure>
+                        <a href="https://www.torproject.org/about/overview">
+                            <img src="<%= how_tor_works_img %>">
+                        </a>
+                        <figcaption>Click to learn more about Tor</figcaption>
+                    </figure>
+                </details>
+                <details>
+                    <summary class="title is-5">Why Tor</summary>
+                    <p>Tor sees use by <a href="https://www.torproject.org/about/torusers" target="_blank">many important segments of the population</a>, including whistle blowers, journalists, Chinese dissidents skirting the Great Firewall and oppressive censorship, abuse victims, stalker targets, the US military, and law enforcement, just to name a few. While Tor is not designed for malicious computer users, it is true that they can use the network for malicious ends. In reality however, the actual amount of <a href="https://www.torproject.org/docs/faq-abuse" target="_blank">abuse</a> is quite low. This is largely because criminals and hackers have significantly better access to privacy and anonymity than do the regular users whom they prey upon. Criminals can and do <a href="http://voices.washingtonpost.com/securityfix/2008/08/web_fraud_20_tools.html" target="_blank">build, sell, and trade</a> far larger and <a href="http://voices.washingtonpost.com/securityfix/2008/08/web_fraud_20_distributing_your.html" target="_blank">more powerful networks</a> than Tor on a daily basis. Thus, in the mind of this operator, the social need for easily accessible censorship-resistant private, anonymous communication trumps the risk of unskilled bad actors, who are almost always more easily uncovered by traditional police work than by extensive monitoring and surveillance anyway.</p>
+                </details>
+                <details>
+                    <summary class="title is-5">Law Compliance & DMCA</summary>
+                    <p>In terms of applicable law, the best way to understand Tor is to consider it a network of routers operating as common carriers, much like the Internet backbone. However, unlike the Internet backbone routers, Tor routers explicitly do not contain identifiable routing information about the source of a packet, and no single Tor node can determine both the origin and destination of a given transmission.</p>
+                    <p>As such, there is little the operator of this router can do to help you track the connection further. This router maintains no logs of any of the Tor traffic, so there is little that can be done to trace either legitimate or illegitimate traffic (or to filter one from the other). Attempts to seize this router will accomplish nothing.</p>
+                    <p>If you are a representative of a company who feels that this router is being used to violate the DMCA, please be aware that this machine does not host or contain any illegal content. Also be aware that network infrastructure maintainers are not liable for the type of content that passes over their equipment. In other words, you will have just as much luck sending a takedown notice to the Internet backbone providers. Please consult <a href="https://www.torproject.org/eff/tor-dmca-response" target="_blank">EFF's prepared response</a> for more information on this matter.</p>
+                    <p>That being said, if you still have a complaint about the router, you may email the <a href="mailto:<%= email %>">maintainer</a>. If complaints are related to a particular service that is being abused, I will consider removing that service from my exit policy, which would prevent my router from allowin already blocked.</p>
+                    <p>You also have the option of blocking this IP address and others on the Tor network if you so desire. The Tor project provides a <a href="https://check.torproject.org/cgi-bin/TorBulkExitList.py" target="_blank">web service</a> to fetch a list of all IP addresses of Tor exit nodes that allow exiting to a specified IP:port combination, and an official <a href="https://www.torproject.org/tordnsel/dist/" target="_blank">DNSRBL</a> is also available to determine if a given IP address is actually a Tor exit server. Please be considerate when using these options. It would be unfortunate to deny all Tor users access to your site indefinitely simply because of a few bad apples.</p>
+                </details>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="has-text-centered">
+            <p>Designed by <a href="https://github.com/SukkaW/tor-exit-page" rel="external" target="_blank">tor-exit-page</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
