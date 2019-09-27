@@ -22,9 +22,9 @@ And you will find `index.html` at `dist` directory.
 
 ## Usage
 
-Basically, you need to setup a webserver (Apache, Nginx, Caddy, etc.) and serve the `index.html`.
+Basically, you need to setup a tor exit, open `DirPort` (usually on `80` for default http service) and set `DirPortFrontPage` to `dist/index.html` file location in your `torrc` configuration file.
 
-Tor can do that for you if your DirPort is on TCP port 80. For more information, please consult the following documentation: [Tor Project | Exit](https://community.torproject.org/relay/setup/exit/)
+For more information, please consult the following documentation: [Tor Project | Exit](https://community.torproject.org/relay/setup/exit/)
 
 ## License
 
