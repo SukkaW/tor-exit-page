@@ -1,6 +1,6 @@
 # Tor Exit Page
 
-This is an alternative `This is a Tor Exir Router` page, used to replace [the default, ugly one](https://svn.torproject.org/svn/tor/branches/hidserv-design-changes/contrib/tor-exit-notice.html).
+This is an alternative `This is a Tor Exit Router` page, used to replace [the default, ugly one](https://svn.torproject.org/svn/tor/branches/hidserv-design-changes/contrib/tor-exit-notice.html) provided by Tor.
 
 ## Build
 
@@ -22,9 +22,9 @@ And you will find `index.html` at `dist` directory.
 
 ## Usage
 
-Basically, you need to setup a tor exit, open `DirPort` (usually on `80` for default http service) and set `DirPortFrontPage` to `dist/index.html` file location in your `torrc` configuration file.
+Basically, you need to setup a tor exit, open `DirPort` (usually on `80` for default http service) and set `DirPortFrontPage` to `dist/index.html` file location in your `torrc` configuration file. For more information, please consult the following documentation: [Tor Project | Exit](https://community.torproject.org/relay/setup/exit/)
 
-For more information, please consult the following documentation: [Tor Project | Exit](https://community.torproject.org/relay/setup/exit/)
+You can also setup a web server (Apache, Nginx, Caddy, etc.) to do the job if your DirPort is not on TCP port 80.
 
 ## License
 
